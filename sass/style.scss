@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-gray: hsl(212, 45%, 89%);
+  --clr-grayish-blue: hsl(220, 15%, 55%);
+  --clr-dark-blue: hsl(218, 44%, 22%);
+}
+
+/* Reset 
+https://piccalil.li/blog/a-modern-css-reset/ 
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  height: 100%;
+  background-color: var(--clr-light-gray);
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.card {
+  max-width: 290px;
+  text-align: center;
+  background-color: var(--clr-white);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  border-radius: 1rem;
+
+  &__qr {
+    padding: 0.875rem 0.875rem 0;
+
+    img {
+      border-radius: 0.6rem;
+    }
+  }
+
+  &__content {
+    padding: 1.25rem 1.4375rem 2.5rem;
+  }
+
+  &__title {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: var(--clr-dark-blue);
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 0.9375em;
+    color: var(--clr-grayish-blue);
+  }
+}
+
+.attribution {
+  position: fixed;
+  bottom: 1%;
+  font-size: 12px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
